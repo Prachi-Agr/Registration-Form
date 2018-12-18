@@ -6,6 +6,8 @@
 	<title>Registration Page</title>
 	<link rel="stylesheet" href="main.css">
 	<script src="script1.js"></script>
+
+
 </head>
 <body>
 	<h1>Registration</h1>
@@ -57,7 +59,7 @@
 
     <br><br>
 
-    <input type="submit" name="submit" value="SUBMIT"> 
+    <input type="submit" name="submit" value="SUBMIT" onclick="display();"> 
     <input type="reset" name="cancel" value="CANCEL"> 
 
     </form> 
@@ -69,4 +71,22 @@
 
 
 </body>
+
+<script type="text/javascript">
+	function display(){
+		var x=document.RegForm.name.value;
+		var y=document.RegForm.Age.value;
+		var z=document.RegForm.email.value;
+		var w=document.RegForm.contact.value;
+		
+
+		alert("Name: "+x+"  "+"Age: "+y+"  "+"Email: "+z+"  "+"Contact Number: "+w);
+
+
+}
+
+   
+
+		
+	</script>
 </html>

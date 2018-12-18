@@ -1,4 +1,7 @@
 label{
-	float:left;
+	float: left;
 	width:150px;
 }
+body{background-color:#ffff99;}
+h1{text-align:center;}
+form{width:300px;}

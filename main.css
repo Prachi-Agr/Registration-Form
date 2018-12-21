@@ -1,4 +1,75 @@
 label{
-	float:left;
+	float: left;
 	width:150px;
 }
+body{background-image: url(background.jpg);
+	
+	background-size: cover;
+     text-align: center;}
+body > * {text-align: left;}
+h1{text-align:center;}
+form{width:300px;
+display:inline-block;}
+
+#sidebar{
+	position:fixed;
+	width:200px;
+	height:100%;
+	background:#151719;
+	left:-200px;
+	transition:all 500ms linear;
+}
+#sidebar.active{
+	left:0px;
+
+}
+#sidebar ul li{
+	color:rgba(230,230,230,0.9);
+	list-style:none;
+	padding: 15px 10px;
+	border-bottom: 1px solid rgba(100,100,100,0.3);
+}
+#sidebar ul li:hover{
+	background-color:#4d4d33;
+}
+#sidebar .toggle-btn{
+	position: absolute;
+
+	
+	left:230px;
+	
+
+}
+#sidebar .toggle-btn span{
+
+	display:block;
+	width:30px;
+	height:5px;
+	background:#151719;
+	margin:5px 0px;
+
+}
+#sidebar ul li ul{
+	margin: 0px;
+	padding: 0px;
+}
+#sidebar ul ul{
+	display:none;
+}
+#sidebar ul li:hover > ul{
+	display:block;
+
+}
+#sidebar ul li ul{
+	background:#4d4d33;
+
+}
+#sidebar ul li ul li:hover{
+	background-color: #a3a375;
+}
+
+
+
+}
+
+

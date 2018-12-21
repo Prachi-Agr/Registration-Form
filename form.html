@@ -5,23 +5,50 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Registration Page</title>
 	<link rel="stylesheet" href="main.css">
+	<script src="script1.js"></script>
+
+
 </head>
-<body>
+<body class="centered-wrapper">
+  <div id="sidebar">
+  	<div class="toggle-btn" onclick="toggleSidebar()">
+  		<span></span>
+  		<span></span>
+  		<span></span>
+  	</div>
+
+  	<ul>
+  		<li>Home</li>
+  		<li>About</li>
+  		<li>Event
+  			<ul>
+  				<li>Internal</li>
+  				<li>Open for all</li>
+  			</ul>
+  		</li>
+  		<li>Contact</li>
+  	</ul>
+  </div>
+
 	<h1>Registration</h1>
-	<form action="www.google.com" method="post">
+	
+	<form action="www.google.com" name="RegForm" onsubmit="return(validate());" method="post">
+   
+   	
+   
     <label>Name</label>
-	<input type="text" placeholder="Name" autofocus required/>
+	<input type="text" placeholder="Name" name="name" autofocus required/>
 	    
 	<br><br>
 
 	<label>Age</label>
-	<input type="number" name="age" required/>
+	<input type="number" name="Age" required/>
 
 	<br><br>
 
 	<label>Gender</label><br>
-	<input type="radio" name="gender" value="Male">Male<br>
-	<input type="radio" name="gender" value="Female">Female<br>
+	<input type="radio" id="m" name="gender" value="Male">Male
+	<input type="radio" id="f" name="gender" value="Female">Female<br>
 
     <br><br>
 
@@ -47,7 +74,7 @@
     <br><br>
 
     <label>Contact Number</label> 
-    <input type="number" name="contact" required/>
+    <input type="text" name="contact" required/>
 
     <br><br>
 
@@ -56,13 +83,42 @@
 
     <br><br>
 
-    <input type="submit" name="submit" value="SUBMIT"> 
+    <input type="submit" name="submit" value="SUBMIT" onclick="display();"> 
     <input type="reset" name="cancel" value="CANCEL"> 
+   
 
     </form> 
+
+	
+
 
 
 
 
 </body>
+
+<script type="text/javascript">
+	function display(){
+		var x=document.RegForm.name.value;
+		var y=document.RegForm.Age.value;
+		var z=document.RegForm.email.value;
+		var w=document.RegForm.contact.value;
+		if(document.getElementById('m').checked){
+			var r=document.getElementById('m').value;
+		}
+        if(document.getElementById('f').checked){
+        	var r=document.getElementById('f').value;
+        }
+
+
+
+		alert("Name: "+x+"  "+"Age: "+y+"  "+"Email: "+z+"  "+"Contact Number: "+w+"  "+"Gender: "+r);
+
+
+}
+
+   
+
+		
+	</script>
 </html>
